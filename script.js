@@ -11,6 +11,7 @@ function typeText(){
     index++;
 
     setTimeout(typeText,60);
+
   }
 
 }
@@ -24,10 +25,18 @@ function startExperience(){
 
   music.play();
 
+  document.querySelector(".counter-section").scrollIntoView({
+    behavior:"smooth"
+  });
+
 }
 
 
 function createHearts(){
+
+  if(document.querySelectorAll(".heart").length > 30){
+    return;
+  }
 
   const heart = document.createElement("div");
 
